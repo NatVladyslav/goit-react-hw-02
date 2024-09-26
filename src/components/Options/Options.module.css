@@ -1,0 +1,8 @@
+.options_wrap{
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+}
+button{
+    width: 100px;
+}

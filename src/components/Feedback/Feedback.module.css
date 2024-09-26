@@ -1,0 +1,5 @@
+.feedback_wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
