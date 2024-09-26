@@ -13,14 +13,21 @@ function App() {
   });
   
   const updateFeedback = feedbackType => {
-  
-}
+    setFeedback({ ...feedback, [feedbackType]: feedback[feedbackType] + 1 });
+  }
+  const resetFeedback = () => {
+    setFeedback({
+    good: 0,
+    neutral: 0,
+    bad: 0
+  })
+  } 
 
   return (
     <div>
       <Description/>
-      <Options option={updateFeedback} />
-      <Feedback good={feedback.good} neutral={feedback.neutral} bad={feedback.bad} />
+      <Options update={updateFeedback} reset={resetFeedback} />
+      <Feedback feedback={feedback} />
   </div>
   )
 }

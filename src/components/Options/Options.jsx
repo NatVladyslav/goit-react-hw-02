@@ -1,11 +1,11 @@
 import css from './Options.module.css'
-const Options = () => {
+const Options = ({ update, reset}) => {
   return (
     <div className={css.options_wrap}>
-      <button>Good</button>
-      <button>Neutral</button>
-      <button>Bad</button>
-      <button>Reset</button>
+      <button onClick={() => update("good")}>Good</button>
+      <button onClick={()=> update("neutral")}>Neutral</button>
+      <button onClick={()=> update("bad")}>Bad</button>
+      <button onClick={reset}>Reset</button>
     </div>
   )
 }
