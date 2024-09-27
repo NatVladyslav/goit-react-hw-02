@@ -26,8 +26,9 @@ function App() {
   return (
     <div>
       <Description/>
-      <Options update={updateFeedback} reset={resetFeedback} />
-      <Feedback feedback={feedback} />
+      <Options resetBtn={feedback.good || feedback.neutral || feedback.bad ? true:false} update={updateFeedback} reset={resetFeedback} />
+      {feedback.good || feedback.neutral || feedback.bad ?
+        <Feedback feedback={feedback} /> : "No feedback yet"}
   </div>
   )
 }
