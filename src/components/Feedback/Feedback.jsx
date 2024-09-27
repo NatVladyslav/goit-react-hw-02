@@ -1,15 +1,13 @@
 import css from './Feedback.module.css'
-const Feedback = ({feedback}) => {
+const Feedback = ({feedback, total, posPercent}) => {
     let { good, neutral, bad } = feedback;
-    let total = good + neutral + bad;
-    let percent = Math.round(good/total * 100)
   return (
     <div className={css.feedback_wrap}>
           <p>Good: {good}</p>
           <p>Neutral: {neutral}</p>
           <p>Bad: {bad}</p>
           <p>Total: {total}</p>
-          <p>Positive: {total === 0 ? 0 : percent}%</p>
+          <p>Positive: {total === 0 ? 0 : posPercent}%</p>
     </div>
   )
 }

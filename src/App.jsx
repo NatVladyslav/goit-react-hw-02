@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Description from './components/Description/Description'
 import Options from './components/Options/Options'
 import Feedback from './components/Feedback/Feedback'
+import Notification from './components/Notification/Notification'
 
 function App() {
 
@@ -22,13 +23,17 @@ function App() {
     bad: 0
   })
   } 
+  const { good, neutral, bad } = feedback;
+
+  let totalFeedback = good + neutral + bad;
+  let positivePercent = Math.round(good/totalFeedback * 100)
 
   return (
     <div>
       <Description/>
-      <Options resetBtn={feedback.good || feedback.neutral || feedback.bad ? true:false} update={updateFeedback} reset={resetFeedback} />
-      {feedback.good || feedback.neutral || feedback.bad ?
-        <Feedback feedback={feedback} /> : "No feedback yet"}
+      <Options total={totalFeedback} update={updateFeedback} reset={resetFeedback} />
+      {good || neutral || bad ?
+        <Feedback feedback={feedback} total={totalFeedback} posPercent={positivePercent}/> : <Notification/>}
   </div>
   )
 }

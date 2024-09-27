@@ -2,7 +2,24 @@
     display: flex;
     column-gap: 10px;
     justify-content: center;
+    margin-top: 30px;
 }
 button{
     width: 100px;
+}
+.goodBtn{
+    background-color: lawngreen;
+    border: none;
+}
+.neutralBtn{
+    background-color: aqua;
+    border: none;
+}
+.badBtn{
+    background-color: red;
+    border: none;
+}
+.resetBtn{
+    background-color: lightslategray;
+    border: 3px solid darkblue;
 }
