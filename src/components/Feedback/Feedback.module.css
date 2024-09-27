@@ -5,12 +5,16 @@
     gap: 10px;
 }
 p{
+    font-size: 30px;
+    font-weight: 400;
     padding: 0;
     margin: 0;
 }
-p:nth-last-child(2){
+.total{
 margin-top: 30px;
+text-decoration: underline;
 }
-p:last-child{
+.positive{
     margin-top: 10px;
+    text-decoration: underline greenyellow;
 }
