@@ -1,10 +1,11 @@
-h1{
+.title{
     color: darkslateblue;
     font-weight: 800;
     margin-bottom: 40px;
     padding: 0;
 }
-p{
+.text{
     font-weight: 400;
     font-size: 30px;
+    color: black;
 }
