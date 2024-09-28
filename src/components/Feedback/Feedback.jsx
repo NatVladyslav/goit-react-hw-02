@@ -1,5 +1,9 @@
 import css from './Feedback.module.css'
-const Feedback = ({feedback, total, posPercent}) => {
+// import { useEffect } from 'react';
+const Feedback = ({ feedback, total, posPercent }) => {
+    //  useEffect(() => {
+    //     localStorage.setItem("localData", JSON.stringify(feedback));
+    // }, [feedback])
     let { good, neutral, bad } = feedback;
   return (
     <div className={css.feedback_wrap}>
