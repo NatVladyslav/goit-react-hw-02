@@ -28,6 +28,12 @@ let data = JSON.parse(localStorage.getItem("localData"));
     }, [feedback])
   const resetFeedback = () => {
     localStorage.removeItem("localData")
+    setFeedback(
+      {
+      good: 0,
+      neutral: 0,
+      bad: 0
+    })
   } 
  
   const { good, neutral, bad } = feedback;
